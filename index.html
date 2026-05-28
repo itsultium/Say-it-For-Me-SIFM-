@@ -73,6 +73,26 @@
     @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
     @media (max-width: 480px) { .api-row { grid-template-columns: 1fr; } .situations { grid-template-columns: 1fr 1fr; } }
 
+    /* Side branding */
+    .side-brand {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: clamp(13px, 1.1vw, 17px);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--border2);
+      writing-mode: vertical-rl;
+      user-select: none;
+      pointer-events: none;
+      transition: color 0.15s;
+    }
+    .side-brand.left { left: 2.5rem; transform: translateY(-50%) rotate(180deg); }
+    .side-brand.right { right: 2.5rem; }
+    @media (max-width: 900px) { .side-brand { display: none; } }
+
     /* Dark mode toggle */
     .theme-toggle { position: fixed; top: 1.25rem; right: 1.25rem; background: var(--accent); border: none; border-radius: 100px; padding: 8px 16px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: #fff; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: opacity 0.15s; z-index: 9999; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
     .theme-toggle:hover { opacity: 0.88; }
@@ -91,6 +111,9 @@
   </style>
 </head>
 <body>
+  <span class="side-brand left">Bruder Motion</span>
+  <span class="side-brand right">Bruder Motion</span>
+
   <button class="theme-toggle" id="themeToggle"><i class="ti ti-moon"></i> Dark</button>
 
   <div class="app">
