@@ -73,6 +73,8 @@
     @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
     @media (max-width: 480px) { .api-row { grid-template-columns: 1fr; } .situations { grid-template-columns: 1fr 1fr; } }
 
+    .header-eyebrow { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; font-weight: 500; }
+
     /* Side branding */
     .side-brand {
       position: fixed;
@@ -118,6 +120,7 @@
 
   <div class="app">
     <header class="header">
+      <div class="header-eyebrow">Bruder Motion</div>
       <h1>Say it <em>for me.</em></h1>
       <p>You know what you mean. We help you say it.</p>
     </header>
